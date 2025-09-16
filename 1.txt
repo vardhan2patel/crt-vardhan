@@ -1,0 +1,245 @@
+1)
+n=6
+for i in range(n):
+    for j in range(n):
+        print("*",end=" ")
+    print()
+2)
+n=6
+for i in range(n):
+    for j in range(n):
+       if i==0 or j==0 or i==n-1 or j==n-1:
+           print("*",end=" ")
+       else:
+           print(" ",end=" ")
+    print()
+3)
+n=7
+k=0
+for i in range (1,n+1):
+    for j in range(1,n+1):
+        if (j<=n):
+            print((k+j),end=" ")
+    print()
+    n=n-1
+4.
+n=4
+for i in range(n):
+    for j in range(n):
+        if j<=n:
+            print("*",end=" ")
+    print()
+    n-=1
+5.
+# bigger of two inputs
+x, y = map(int, input().split())
+if x > y:
+    print(x)
+else:
+    print(y)
+
+# largest among three
+p, q, r = map(int, input().split())
+if p >= q and p >= r:
+    print(p)
+elif q >= r:
+    print(q)
+else:
+    print(r)
+
+# sign of a number
+num = int(input())
+if num == 0:
+    print("Zero")
+elif num > 0:
+    print("Positive")
+else:
+    print("Negative")
+
+# multiple check
+val = int(input())
+if val % 5 == 0 and val % 11 == 0:
+    print("Divisible by 5 and 11")
+else:
+    print("Not Divisible by 5 and 11")
+
+# even or odd
+check_num = int(input())
+if check_num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+# leap year check
+yr = int(input())
+if yr % 400 == 0:
+    print("Leap Year")
+elif yr % 100 == 0:
+    print("Not a Leap Year")
+elif yr % 4 == 0:
+    print("Leap Year")
+else:
+    print("Not a Leap Year")
+
+# alphabet test
+char = input()
+if ('a' <= char <= 'z') or ('A' <= char <= 'Z'):
+    print("Alphabet")
+else:
+    print("Not an Alphabet")
+
+# vowel or consonant
+letter = input()
+if letter.lower() in "aeiou":
+    print("Vowel")
+else:
+    print("Consonant")
+
+# type of character
+symbol = input()
+if symbol.isalpha():
+    print("Alphabet")
+elif symbol.isdigit():
+    print("Digit")
+else:
+    print("Special Character")
+
+# case check
+alpha = input()
+if 'A' <= alpha <= 'Z':
+    print("Uppercase Alphabet")
+elif 'a' <= alpha <= 'z':
+    print("Lowercase Alphabet")
+else:
+    print("Not an Alphabet")
+
+# day name
+day_num = int(input())
+if day_num == 1:
+    print("Monday")
+elif day_num == 2:
+    print("Tuesday")
+elif day_num == 3:
+    print("Wednesday")
+elif day_num == 4:
+    print("Thursday")
+elif day_num == 5:
+    print("Friday")
+elif day_num == 6:
+    print("Saturday")
+elif day_num == 7:
+    print("Sunday")
+else:
+    print("Invalid")
+
+# days in month
+mon = int(input())
+if mon in [1, 3, 5, 7, 8, 10, 12]:
+    print("31 days")
+elif mon in [4, 6, 9, 11]:
+    print("30 days")
+elif mon == 2:
+    print("28 or 29 days")
+else:
+    print("Invalid")
+
+# count notes
+amt = int(input())
+currency = [100, 50, 20, 10, 5, 2, 1]
+for note in currency:
+    cnt = amt // note
+    print(note, ":", cnt)
+    amt %= note
+
+# triangle by angles
+x1, x2, x3 = map(int, input().split())
+if x1 + x2 + x3 == 180:
+    print("Valid Triangle")
+else:
+    print("Invalid Triangle")
+
+# triangle by sides
+s1, s2, s3 = map(int, input().split())
+if s1 + s2 > s3 and s2 + s3 > s1 and s1 + s3 > s2:
+    print("Valid Triangle")
+else:
+    print("Invalid Triangle")
+
+# type of triangle
+m, n, o = map(int, input().split())
+if m == n == o:
+    print("Equilateral Triangle")
+elif m == n or n == o or m == o:
+    print("Isosceles Triangle")
+else:
+    print("Scalene Triangle")
+
+# quadratic roots
+import math
+A, B, C = map(float, input().split())
+disc = B*B - 4*A*C
+if disc > 0:
+    root1 = (-B + math.sqrt(disc)) / (2*A)
+    root2 = (-B - math.sqrt(disc)) / (2*A)
+    print("Real and Distinct Roots:", root1, root2)
+elif disc == 0:
+    root = -B / (2*A)
+    print("Real and Equal Roots:", root)
+else:
+    realPart = -B / (2*A)
+    imagPart = math.sqrt(-disc) / (2*A)
+    print("Complex Roots:", f"{realPart}+{imagPart}i", f"{realPart}-{imagPart}i")
+
+# profit or loss
+cost, sell = map(float, input().split())
+if sell > cost:
+    print("Profit:", sell - cost)
+elif cost > sell:
+    print("Loss:", cost - sell)
+else:
+    print("No Profit No Loss")
+
+# grading system
+sub1, sub2, sub3, sub4, sub5 = map(float, input().split())
+sum_marks = sub1 + sub2 + sub3 + sub4 + sub5
+percent = sum_marks / 5
+if percent >= 90:
+    print("Grade A")
+elif percent >= 80:
+    print("Grade B")
+elif percent >= 70:
+    print("Grade C")
+elif percent >= 60:
+    print("Grade D")
+elif percent >= 40:
+    print("Grade E")
+else:
+    print("Grade F")
+
+# salary calc
+basic_pay = float(input())
+if basic_pay <= 10000:
+    hra = 0.2 * basic_pay
+    da = 0.8 * basic_pay
+elif basic_pay <= 20000:
+    hra = 0.25 * basic_pay
+    da = 0.9 * basic_pay
+else:
+    hra = 0.3 * basic_pay
+    da = 0.95 * basic_pay
+gross_salary = basic_pay + hra + da
+print("Gross Salary:", gross_salary)
+
+# electricity bill
+unit = float(input())
+if unit <= 50:
+    bill_amt = unit * 0.5
+elif unit <= 150:
+    bill_amt = 50 * 0.5 + (unit - 50) * 0.75
+elif unit <= 250:
+    bill_amt = 50 * 0.5 + 100 * 0.75 + (unit - 150) * 1.2
+else:
+    bill_amt = 50 * 0.5 + 100 * 0.75 + 100 * 1.2 + (unit - 250) * 1.5
+extra_charge = bill_amt * 0.2
+final_bill = bill_amt + extra_charge
+print("Total Electricity Bill:", final_bill)
